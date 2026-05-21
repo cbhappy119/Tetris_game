@@ -17,14 +17,16 @@ namespace {
 constexpr int kBoardWidth = 10;
 constexpr int kBoardHeight = 20;
 constexpr int kCellSize = 30;
-constexpr int kSidePanelWidth = 220;
-constexpr int kWindowWidth = kBoardWidth * kCellSize + kSidePanelWidth + 80;
+constexpr int kSidePanelWidth = 250;
+constexpr int kWindowWidth = kBoardWidth * kCellSize + kSidePanelWidth + 110;
 constexpr int kWindowHeight = kBoardHeight * kCellSize + 80;
-constexpr int kBoardOffsetX = 40;
+constexpr int kBoardOffsetX = 34;
 constexpr int kBoardOffsetY = 40;
 constexpr int kPreviewCell = 20;
-constexpr int kPreviewOffsetX = kBoardOffsetX + kBoardWidth * kCellSize + 55;
-constexpr int kPreviewOffsetY = 290;
+constexpr int kSidePanelX = kBoardOffsetX + kBoardWidth * kCellSize + 32;
+constexpr int kSideContentX = kSidePanelX + 22;
+constexpr int kPreviewOffsetX = kSideContentX + 2;
+constexpr int kPreviewOffsetY = 322;
 constexpr int kAudioSampleRate = 44100;
 constexpr float kPi = 3.1415926535f;
 
@@ -204,11 +206,21 @@ std::vector<sf::Int16> generateMusic() {
 
 std::optional<sf::Font> loadFont() {
     sf::Font font;
-    if (font.loadFromFile(assetPath("fonts/title.ttf").string())) {
+    const auto bundledFont = assetPath("fonts/title.ttf");
+    if (std::filesystem::exists(bundledFont) && font.loadFromFile(bundledFont.string())) {
         return font;
     }
-    if (font.loadFromFile("C:/Windows/Fonts/arial.ttf")) {
-        return font;
+
+    const std::array<std::string, 4> systemFonts = {
+        "C:/Windows/Fonts/segoeui.ttf",
+        "C:/Windows/Fonts/arial.ttf",
+        "C:/Windows/Fonts/calibri.ttf",
+        "C:/Windows/Fonts/tahoma.ttf"
+    };
+    for (const auto& path : systemFonts) {
+        if (std::filesystem::exists(path) && font.loadFromFile(path)) {
+            return font;
+        }
     }
     return std::nullopt;
 }
@@ -235,14 +247,22 @@ int main() {
         font = &fallbackFont;
     }
 
-    sf::SoundBuffer musicBuffer;
-    const auto musicSamples = generateMusic();
-    musicBuffer.loadFromSamples(musicSamples.data(), musicSamples.size(), 2, kAudioSampleRate);
-    sf::Sound music;
-    music.setBuffer(musicBuffer);
-    music.setLoop(true);
-    music.setVolume(28.f);
-    music.play();
+    sf::Music backgroundMusic;
+    sf::SoundBuffer generatedMusicBuffer;
+    sf::Sound generatedMusic;
+    const auto customMusicPath = assetPath("bg.mp3");
+    if (std::filesystem::exists(customMusicPath) && backgroundMusic.openFromFile(customMusicPath.string())) {
+        backgroundMusic.setLoop(true);
+        backgroundMusic.setVolume(35.f);
+        backgroundMusic.play();
+    } else {
+        const auto musicSamples = generateMusic();
+        generatedMusicBuffer.loadFromSamples(musicSamples.data(), musicSamples.size(), 2, kAudioSampleRate);
+        generatedMusic.setBuffer(generatedMusicBuffer);
+        generatedMusic.setLoop(true);
+        generatedMusic.setVolume(28.f);
+        generatedMusic.play();
+    }
 
     std::mt19937 rng{std::random_device{}()};
     Board board{};
@@ -448,11 +468,30 @@ int main() {
         }
 
         sf::RectangleShape sidePanel({static_cast<float>(kSidePanelWidth), static_cast<float>(kWindowHeight - 80)});
-        sidePanel.setPosition(kBoardOffsetX + kBoardWidth * kCellSize + 30.f, 40.f);
+        sidePanel.setPosition(static_cast<float>(kSidePanelX), 40.f);
         sidePanel.setFillColor(theme.panel);
         sidePanel.setOutlineThickness(2.f);
         sidePanel.setOutlineColor(theme.panelBorder);
         window.draw(sidePanel);
+
+        sf::RectangleShape titleGlow({190.f, 3.f});
+        titleGlow.setPosition(static_cast<float>(kSideContentX), 104.f);
+        titleGlow.setFillColor(sf::Color(80, 210, 255, 170));
+        window.draw(titleGlow);
+
+        sf::RectangleShape statsCard({206.f, 122.f});
+        statsCard.setPosition(static_cast<float>(kSideContentX), 128.f);
+        statsCard.setFillColor(sf::Color(8, 13, 28, 150));
+        statsCard.setOutlineThickness(1.2f);
+        statsCard.setOutlineColor(sf::Color(100, 160, 255, 90));
+        window.draw(statsCard);
+
+        sf::RectangleShape controlsCard({206.f, 58.f});
+        controlsCard.setPosition(static_cast<float>(kSideContentX), 552.f);
+        controlsCard.setFillColor(sf::Color(8, 13, 28, 135));
+        controlsCard.setOutlineThickness(1.2f);
+        controlsCard.setOutlineColor(sf::Color(100, 160, 255, 75));
+        window.draw(controlsCard);
 
         if (font) {
             auto drawText = [&](const std::string& str, float size, float x, float y, sf::Color color) {
@@ -462,20 +501,26 @@ int main() {
                 window.draw(text);
             };
 
-            drawText("NEON TETRIS", 28.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 62.f, theme.accent);
-            drawText("Score", 20.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 120.f, theme.text);
-            drawText(std::to_string(score), 28.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 145.f, sf::Color::White);
-            drawText("Level", 20.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 190.f, theme.text);
-            drawText(std::to_string(level), 28.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 215.f, sf::Color::White);
-            drawText("High", 20.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 250.f, theme.text);
-            drawText(std::to_string(highScore), 24.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 275.f, sf::Color::White);
-            drawText("Next", 20.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 325.f, theme.text);
-            drawText("Hold", 20.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 455.f, theme.text);
-            drawText("Arrows move  Up rotate  Space drop", 15.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 575.f, sf::Color(210, 220, 255));
-            drawText("C hold  P pause  R restart", 15.f, kBoardOffsetX + kBoardWidth * kCellSize + 52.f, 598.f, sf::Color(210, 220, 255));
+            const float sx = static_cast<float>(kSideContentX);
+            drawText("TETRIS", 30.f, sx + 44.f, 68.f, theme.accent);
+            drawText("SCORE", 14.f, sx + 14.f, 144.f, sf::Color(155, 178, 220));
+            drawText(std::to_string(score), 26.f, sx + 14.f, 162.f, sf::Color::White);
+            drawText("LEVEL", 14.f, sx + 124.f, 144.f, sf::Color(155, 178, 220));
+            drawText(std::to_string(level), 26.f, sx + 124.f, 162.f, sf::Color::White);
+            drawText("BEST", 14.f, sx + 14.f, 205.f, sf::Color(155, 178, 220));
+            drawText(std::to_string(highScore), 24.f, sx + 14.f, 222.f, sf::Color::White);
+            drawText("NEXT BLOCK", 16.f, sx, 286.f, theme.text);
+            drawText("HOLD BLOCK", 16.f, sx, 426.f, theme.text);
+            drawText("Move: Arrow     Rotate: Up/X", 13.f, sx + 12.f, 564.f, sf::Color(210, 220, 255));
+            drawText("Drop: Space     Hold: C", 13.f, sx + 12.f, 582.f, sf::Color(210, 220, 255));
 
             auto drawPreview = [&](const Piece& piece, float ox, float oy) {
                 for (const auto& block : piece.blocks) {
+                    sf::RectangleShape shadow({static_cast<float>(kPreviewCell), static_cast<float>(kPreviewCell)});
+                    shadow.setPosition(ox + (block.x + 2) * kPreviewCell + 2.f, oy + (block.y + 2) * kPreviewCell + 2.f);
+                    shadow.setFillColor(sf::Color(piece.color.r, piece.color.g, piece.color.b, 55));
+                    window.draw(shadow);
+
                     sf::RectangleShape cell({static_cast<float>(kPreviewCell - 2), static_cast<float>(kPreviewCell - 2)});
                     cell.setPosition(ox + (block.x + 2) * kPreviewCell, oy + (block.y + 2) * kPreviewCell);
                     cell.setFillColor(piece.color);
@@ -483,28 +528,36 @@ int main() {
                 }
             };
 
-            sf::RectangleShape previewBox({120.f, 100.f});
-            previewBox.setPosition(kPreviewOffsetX - 10.f, kPreviewOffsetY - 10.f);
+            sf::RectangleShape previewBox({206.f, 96.f});
+            previewBox.setPosition(sx, kPreviewOffsetY - 16.f);
             previewBox.setFillColor(sf::Color(10, 15, 30, 180));
             previewBox.setOutlineThickness(1.5f);
             previewBox.setOutlineColor(sf::Color(100, 160, 255, 120));
             window.draw(previewBox);
-            drawPreview(queue.front(), kPreviewOffsetX, kPreviewOffsetY);
+            drawPreview(queue.front(), sx + 54.f, static_cast<float>(kPreviewOffsetY));
 
-            sf::RectangleShape holdBox({120.f, 100.f});
-            holdBox.setPosition(kPreviewOffsetX - 10.f, kPreviewOffsetY + 130.f);
+            sf::RectangleShape holdBox({206.f, 96.f});
+            holdBox.setPosition(sx, kPreviewOffsetY + 124.f);
             holdBox.setFillColor(sf::Color(10, 15, 30, 180));
             holdBox.setOutlineThickness(1.5f);
             holdBox.setOutlineColor(sf::Color(100, 160, 255, 120));
             window.draw(holdBox);
-            if (hasHold) drawPreview(holdPiece, kPreviewOffsetX, kPreviewOffsetY + 130.f);
+            if (hasHold) drawPreview(holdPiece, sx + 54.f, static_cast<float>(kPreviewOffsetY + 140));
 
             if (paused) {
-                drawText("PAUSED", 34.f, 150.f, 300.f, sf::Color::Yellow);
+                sf::RectangleShape overlay({static_cast<float>(kBoardWidth * kCellSize), 78.f});
+                overlay.setPosition(static_cast<float>(kBoardOffsetX), 286.f);
+                overlay.setFillColor(sf::Color(4, 6, 14, 170));
+                window.draw(overlay);
+                drawText("PAUSE", 34.f, 132.f, 302.f, sf::Color::Yellow);
             }
             if (gameOver) {
-                drawText("GAME OVER", 34.f, 118.f, 300.f, sf::Color(255, 100, 120));
-                drawText("Press R to restart", 20.f, 118.f, 345.f, sf::Color::White);
+                sf::RectangleShape overlay({static_cast<float>(kBoardWidth * kCellSize), 104.f});
+                overlay.setPosition(static_cast<float>(kBoardOffsetX), 274.f);
+                overlay.setFillColor(sf::Color(4, 6, 14, 185));
+                window.draw(overlay);
+                drawText("GAME OVER", 34.f, 104.f, 292.f, sf::Color(255, 100, 120));
+                drawText("Press R Restart", 20.f, 112.f, 336.f, sf::Color::White);
             }
         }
 

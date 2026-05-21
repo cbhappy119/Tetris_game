@@ -21,6 +21,10 @@ FetchContent_MakeAvailable(SFML)
 
 add_executable(NeonTetris src/main.cpp)
 
+if(WIN32)
+  set_target_properties(NeonTetris PROPERTIES WIN32_EXECUTABLE TRUE)
+endif()
+
 target_link_libraries(NeonTetris PRIVATE sfml-graphics sfml-window sfml-system sfml-audio)
 
 target_compile_options(NeonTetris PRIVATE -Wall -Wextra -Wpedantic)

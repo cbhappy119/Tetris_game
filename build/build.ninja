@@ -50,8 +50,6 @@ build CMakeFiles/NeonTetris.dir/src/main.cpp.obj: CXX_COMPILER__NeonTetris_unsca
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include
   OBJECT_DIR = CMakeFiles\NeonTetris.dir
   OBJECT_FILE_DIR = CMakeFiles\NeonTetris.dir\src
-  TARGET_COMPILE_PDB = CMakeFiles\NeonTetris.dir\
-  TARGET_PDB = NeonTetris.pdb
 
 
 # =============================================================================
@@ -62,14 +60,14 @@ build CMakeFiles/NeonTetris.dir/src/main.cpp.obj: CXX_COMPILER__NeonTetris_unsca
 # Link the executable NeonTetris.exe
 
 build NeonTetris.exe: CXX_EXECUTABLE_LINKER__NeonTetris_ CMakeFiles/NeonTetris.dir/src/main.cpp.obj | _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-audio.a _deps/sfml-build/lib/libsfml-system.a || sfml-audio-2.dll sfml-graphics-2.dll sfml-system-2.dll sfml-window-2.dll
+  LINK_FLAGS = -mwindows
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics.a  _deps/sfml-build/lib/libsfml-window.a  _deps/sfml-build/lib/libsfml-audio.a  _deps/sfml-build/lib/libsfml-system.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NeonTetris.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = CMakeFiles\NeonTetris.dir\
   TARGET_FILE = NeonTetris.exe
   TARGET_IMPLIB = libNeonTetris.dll.a
-  TARGET_PDB = NeonTetris.pdb
+  TARGET_PDB = NeonTetris.exe.dbg
 
 
 #############################################
@@ -372,8 +370,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Err.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -382,8 +378,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj: C
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Lock.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -392,8 +386,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj: 
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Mutex.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -402,8 +394,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Sleep.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -412,8 +402,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/String.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -422,8 +410,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Thread.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -432,8 +418,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/ThreadLocal.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -442,8 +426,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Time.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -452,8 +434,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj: 
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -462,8 +442,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStrea
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -472,8 +450,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStr
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ClockImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -482,8 +458,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/MutexImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -492,8 +466,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/SleepImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -502,8 +474,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -512,8 +482,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadIm
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadLocalImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -522,8 +490,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLo
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj: RC_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/System/sfml-system.rc || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
@@ -531,8 +497,6 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
-  TARGET_PDB = sfml-system.pdb
 
 
 # =============================================================================
@@ -548,10 +512,9 @@ build sfml-system-2.dll _deps/sfml-build/lib/libsfml-system.a: CXX_SHARED_LIBRAR
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\
   TARGET_FILE = sfml-system-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-system.a
-  TARGET_PDB = sfml-system.pdb
+  TARGET_PDB = sfml-system-2.dll.dbg
 
 
 #############################################
@@ -663,8 +626,6 @@ build _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir\sfml-main.pdb
-  TARGET_PDB = _deps\sfml-build\lib\libsfml-main.pdb
 
 
 # =============================================================================
@@ -678,9 +639,8 @@ build _deps/sfml-build/lib/libsfml-main.a: CXX_STATIC_LIBRARY_LINKER__sfml-main_
   OBJECT_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir\sfml-main.pdb
   TARGET_FILE = _deps\sfml-build\lib\libsfml-main.a
-  TARGET_PDB = _deps\sfml-build\lib\libsfml-main.pdb
+  TARGET_PDB = sfml-main.a.dbg
 
 
 #############################################
@@ -793,8 +753,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Context.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -803,8 +761,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.ob
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Cursor.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -813,8 +769,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlContext.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -823,8 +777,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlResource.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -833,8 +785,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Joystick.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -843,8 +793,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/JoystickManager.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -853,8 +801,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManage
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Keyboard.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -863,8 +809,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Mouse.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -873,8 +817,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Touch.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -883,8 +825,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Sensor.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -893,8 +833,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/SensorManager.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -903,8 +841,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/VideoMode.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -913,8 +849,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Vulkan.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -923,8 +857,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Window.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -933,8 +865,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowBase.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -943,8 +873,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -953,8 +881,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/CursorImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -963,8 +889,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorIm
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/ClipboardImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -973,8 +897,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/Clipboar
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/InputImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -983,8 +905,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/JoystickImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -993,8 +913,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/Joystick
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/SensorImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1003,8 +921,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorIm
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VideoModeImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1013,8 +929,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoMod
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VulkanImplWin32.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1023,8 +937,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanIm
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WindowImplWin32.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1033,8 +945,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowIm
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WglContext.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1043,8 +953,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglConte
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj: RC_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Window/sfml-window.rc || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
@@ -1052,8 +960,6 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
-  TARGET_PDB = sfml-window.pdb
 
 
 # =============================================================================
@@ -1069,10 +975,9 @@ build sfml-window-2.dll _deps/sfml-build/lib/libsfml-window.a: CXX_SHARED_LIBRAR
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\
   TARGET_FILE = sfml-window-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-window.a
-  TARGET_PDB = sfml-window.pdb
+  TARGET_PDB = sfml-window-2.dll.dbg
 
 
 #############################################
@@ -1185,8 +1090,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Color.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1195,8 +1098,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Font.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1205,8 +1106,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Glsl.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1215,8 +1114,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1225,8 +1122,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1235,8 +1130,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensio
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Image.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1245,8 +1138,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ImageLoader.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1255,8 +1146,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoade
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderStates.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1265,8 +1154,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStat
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTexture.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1275,8 +1162,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderText
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTarget.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1285,8 +1170,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarg
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1295,8 +1178,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWind
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shader.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1305,8 +1186,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Texture.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1315,8 +1194,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/TextureSaver.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1325,8 +1202,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSav
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transform.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1335,8 +1210,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transformable.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1345,8 +1218,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transforma
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/View.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1355,8 +1226,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Vertex.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1365,8 +1234,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1375,8 +1242,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/CircleShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1385,8 +1250,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShap
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RectangleShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1395,8 +1258,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleS
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ConvexShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1405,8 +1266,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShap
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Sprite.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1415,8 +1274,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Text.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1425,8 +1282,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1435,8 +1290,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArra
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexBuffer.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1445,8 +1298,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuff
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1455,8 +1306,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderText
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1465,8 +1314,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderText
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1475,8 +1322,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderText
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj: RC_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Graphics/sfml-graphics.rc || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
@@ -1484,8 +1329,6 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graph
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
-  TARGET_PDB = sfml-graphics.pdb
 
 
 # =============================================================================
@@ -1501,10 +1344,9 @@ build sfml-graphics-2.dll _deps/sfml-build/lib/libsfml-graphics.a: CXX_SHARED_LI
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\
   TARGET_FILE = sfml-graphics-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-graphics.a
-  TARGET_PDB = sfml-graphics.pdb
+  TARGET_PDB = sfml-graphics-2.dll.dbg
 
 
 #############################################
@@ -1617,8 +1459,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj:
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AlResource.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1627,8 +1467,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.o
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AudioDevice.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1637,8 +1475,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Listener.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1647,8 +1483,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Music.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1657,8 +1491,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: C
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Sound.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1667,8 +1499,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: C
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBuffer.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1677,8 +1507,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBufferRecorder.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1687,8 +1515,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecor
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/InputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1697,8 +1523,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.c
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/OutputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1707,8 +1531,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundRecorder.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1717,8 +1539,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cp
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundSource.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1727,8 +1547,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundStream.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1737,8 +1555,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileFactory.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1747,8 +1563,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderFlac.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1757,8 +1571,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderF
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1767,8 +1579,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderM
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderOgg.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1777,8 +1587,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderO
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderWav.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1787,8 +1595,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderW
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterFlac.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1797,8 +1603,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterF
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterOgg.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1807,8 +1611,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterO
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1817,8 +1619,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterW
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj: RC_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Audio/sfml-audio.rc || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
@@ -1826,8 +1626,6 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.ob
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
-  TARGET_PDB = sfml-audio.pdb
 
 
 # =============================================================================
@@ -1843,10 +1641,9 @@ build sfml-audio-2.dll _deps/sfml-build/lib/libsfml-audio.a: CXX_SHARED_LIBRARY_
   POST_BUILD = cd .
   PRE_LINK = cd .
   RESTAT = 1
-  TARGET_COMPILE_PDB = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\
   TARGET_FILE = sfml-audio-2.dll
   TARGET_IMPLIB = _deps\sfml-build\lib\libsfml-audio.a
-  TARGET_PDB = sfml-audio.pdb
+  TARGET_PDB = sfml-audio-2.dll.dbg
 
 
 #############################################
@@ -2021,14 +1818,14 @@ build _deps/sfml-build/src/SFML/Window/all: phony sfml-window-2.dll
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPack.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckTypeSize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindGit.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenAL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/MyCursorPJ/Tetris_game/CMakeLists.txt _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerOptionsOverride.cmake _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Main/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/windows/resource.rc.in
+build build.ninja: RERUN_CMAKE | C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPack.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckTypeSize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindGit.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenAL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/MyCursorPJ/Tetris_game/CMakeLists.txt _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerOptionsOverride.cmake _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Main/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/windows/resource.rc.in
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeNinjaFindMake.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPack.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckTypeSize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindGit.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenAL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/MyCursorPJ/Tetris_game/CMakeLists.txt _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerOptionsOverride.cmake _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Main/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/windows/resource.rc.in: phony
+build C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeParseArguments.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPack.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CPackComponent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckIncludeFileCXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/CheckTypeSize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/ExternalProject/shared_internal_commands.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FetchContent/CMakeLists.cmake.in C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindGit.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenAL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindOpenGL.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/FindPackageMessage.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/GNUInstallDirs.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake C$:/Qt/Tools/CMake_64/share/cmake-3.30/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake E$:/MyCursorPJ/Tetris_game/CMakeLists.txt _deps/sfml-src/CMakeLists.txt _deps/sfml-src/cmake/CompilerOptionsOverride.cmake _deps/sfml-src/cmake/CompilerWarnings.cmake _deps/sfml-src/cmake/Config.cmake _deps/sfml-src/cmake/Macros.cmake _deps/sfml-src/cmake/Modules/FindFLAC.cmake _deps/sfml-src/cmake/Modules/FindFreetype.cmake _deps/sfml-src/cmake/Modules/FindVORBIS.cmake _deps/sfml-src/cmake/SFMLConfig.cmake.in _deps/sfml-src/cmake/SFMLConfigDependencies.cmake.in _deps/sfml-src/src/SFML/Audio/CMakeLists.txt _deps/sfml-src/src/SFML/CMakeLists.txt _deps/sfml-src/src/SFML/Graphics/CMakeLists.txt _deps/sfml-src/src/SFML/Main/CMakeLists.txt _deps/sfml-src/src/SFML/System/CMakeLists.txt _deps/sfml-src/src/SFML/Window/CMakeLists.txt _deps/sfml-src/tools/windows/resource.rc.in: phony
 
 
 #############################################
