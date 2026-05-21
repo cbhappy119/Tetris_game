@@ -1,0 +1,61 @@
+# Build outputs
+build/
+out/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+compile_commands.json
+.ninja_*
+build.ninja
+rules.ninja
+
+# Executables and binary artifacts
+*.exe
+*.dll
+*.lib
+*.a
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+*.res
+
+# Release / installer outputs
+release/
+dist/
+installer-output/
+Output/
+*.msi
+*.zip
+*.7z
+*.rar
+
+# Local runtime data
+highscore.txt
+*.log
+
+# Local assets that may be large or copyrighted
+# Keep the folder structure if needed, but do not upload personal music files.
+assets/bg.mp3
+
+# IDE / editor files
+.vscode/
+.idea/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+.vs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Cursor/local metadata
+.cursor/
+.git/cursor/
