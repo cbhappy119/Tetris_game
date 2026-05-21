@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: NeonTetris
-# Configurations: 
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -20,6 +20,11 @@
 
 ninja_required_version = 1.5
 
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -44,12 +49,18 @@ cmake_ninja_workdir = E$:/MyCursorPJ/Tetris_game/build/
 
 build cmake_object_order_depends_target_NeonTetris: phony || cmake_object_order_depends_target_sfml-audio cmake_object_order_depends_target_sfml-graphics cmake_object_order_depends_target_sfml-system cmake_object_order_depends_target_sfml-window
 
-build CMakeFiles/NeonTetris.dir/src/main.cpp.obj: CXX_COMPILER__NeonTetris_unscanned_ E$:/MyCursorPJ/Tetris_game/src/main.cpp || cmake_object_order_depends_target_NeonTetris
+build CMakeFiles/NeonTetris.dir/src/main.cpp.obj: CXX_COMPILER__NeonTetris_unscanned_Release E$:/MyCursorPJ/Tetris_game/src/main.cpp || cmake_object_order_depends_target_NeonTetris
   DEP_FILE = CMakeFiles\NeonTetris.dir\src\main.cpp.obj.d
-  FLAGS = -std=gnu++17 -Wall -Wextra -Wpedantic
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include
   OBJECT_DIR = CMakeFiles\NeonTetris.dir
   OBJECT_FILE_DIR = CMakeFiles\NeonTetris.dir\src
+
+build CMakeFiles/NeonTetris.dir/app.rc.obj: RC_COMPILER__NeonTetris_unscanned_Release E$:/MyCursorPJ/Tetris_game/app.rc || cmake_object_order_depends_target_NeonTetris
+  DEP_FILE = CMakeFiles\NeonTetris.dir\app.rc.obj.d
+  INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include
+  OBJECT_DIR = CMakeFiles\NeonTetris.dir
+  OBJECT_FILE_DIR = CMakeFiles\NeonTetris.dir
 
 
 # =============================================================================
@@ -59,7 +70,8 @@ build CMakeFiles/NeonTetris.dir/src/main.cpp.obj: CXX_COMPILER__NeonTetris_unsca
 #############################################
 # Link the executable NeonTetris.exe
 
-build NeonTetris.exe: CXX_EXECUTABLE_LINKER__NeonTetris_ CMakeFiles/NeonTetris.dir/src/main.cpp.obj | _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-audio.a _deps/sfml-build/lib/libsfml-system.a || sfml-audio-2.dll sfml-graphics-2.dll sfml-system-2.dll sfml-window-2.dll
+build NeonTetris.exe: CXX_EXECUTABLE_LINKER__NeonTetris_Release CMakeFiles/NeonTetris.dir/src/main.cpp.obj CMakeFiles/NeonTetris.dir/app.rc.obj | _deps/sfml-build/lib/libsfml-graphics.a _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-audio.a _deps/sfml-build/lib/libsfml-system.a || sfml-audio-2.dll sfml-graphics-2.dll sfml-system-2.dll sfml-window-2.dll
+  FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-graphics.a  _deps/sfml-build/lib/libsfml-window.a  _deps/sfml-build/lib/libsfml-audio.a  _deps/sfml-build/lib/libsfml-system.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\NeonTetris.dir
@@ -363,135 +375,135 @@ build _deps/sfml-build/src/SFML/install/strip: phony _deps/sfml-build/src/SFML/C
 
 build cmake_object_order_depends_target_sfml-system: phony || .
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Clock.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Clock.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Clock.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Err.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Err.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Err.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Lock.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Lock.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Lock.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Mutex.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Mutex.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Mutex.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Sleep.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Sleep.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Sleep.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/String.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/String.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\String.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Thread.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Thread.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Thread.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/ThreadLocal.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/ThreadLocal.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\ThreadLocal.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Time.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Time.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Time.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/FileInputStream.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\FileInputStream.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/MemoryInputStream.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\MemoryInputStream.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ClockImpl.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ClockImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32\ClockImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/MutexImpl.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/MutexImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32\MutexImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/SleepImpl.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/SleepImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32\SleepImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadImpl.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32\ThreadImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadLocalImpl.cpp || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj: CXX_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/System/Win32/ThreadLocalImpl.cpp || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32\ThreadLocalImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\Win32
 
-build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj: RC_COMPILER__sfml-system_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/System/sfml-system.rc || cmake_object_order_depends_target_sfml-system
+build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj: RC_COMPILER__sfml-system_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/System/sfml-system.rc || cmake_object_order_depends_target_sfml-system
   DEFINES = -DSFML_SYSTEM_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir\sfml-system.rc.obj.d
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
@@ -506,7 +518,8 @@ build _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc
 #############################################
 # Link the shared library sfml-system-2.dll
 
-build sfml-system-2.dll _deps/sfml-build/lib/libsfml-system.a: CXX_SHARED_LIBRARY_LINKER__sfml-system_ _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj
+build sfml-system-2.dll _deps/sfml-build/lib/libsfml-system.a: CXX_SHARED_LIBRARY_LINKER__sfml-system_Release _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Clock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Lock.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Sleep.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Time.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.obj _deps/sfml-build/src/SFML/System/CMakeFiles/sfml-system.dir/sfml-system.rc.obj
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\System\CMakeFiles\sfml-system.dir
   POST_BUILD = cd .
@@ -620,9 +633,9 @@ build _deps/sfml-build/src/SFML/System/install/strip: phony _deps/sfml-build/src
 
 build cmake_object_order_depends_target_sfml-main: phony || .
 
-build _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj: CXX_COMPILER__sfml-main_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Main/MainWin32.cpp || cmake_object_order_depends_target_sfml-main
+build _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj: CXX_COMPILER__sfml-main_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Main/MainWin32.cpp || cmake_object_order_depends_target_sfml-main
   DEP_FILE = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir\MainWin32.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src
   OBJECT_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
@@ -635,7 +648,8 @@ build _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj:
 #############################################
 # Link the static library _deps\sfml-build\lib\libsfml-main.a
 
-build _deps/sfml-build/lib/libsfml-main.a: CXX_STATIC_LIBRARY_LINKER__sfml-main_ _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj
+build _deps/sfml-build/lib/libsfml-main.a: CXX_STATIC_LIBRARY_LINKER__sfml-main_Release _deps/sfml-build/src/SFML/Main/CMakeFiles/sfml-main.dir/MainWin32.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = _deps\sfml-build\src\SFML\Main\CMakeFiles\sfml-main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -746,215 +760,215 @@ build _deps/sfml-build/src/SFML/Main/install/strip: phony _deps/sfml-build/src/S
 
 build cmake_object_order_depends_target_sfml-window: phony || cmake_object_order_depends_target_sfml-system
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Clipboard.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Clipboard.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Clipboard.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Context.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Context.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Context.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Cursor.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Cursor.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Cursor.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlContext.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlContext.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\GlContext.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlResource.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/GlResource.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\GlResource.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Joystick.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Joystick.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Joystick.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/JoystickManager.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/JoystickManager.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\JoystickManager.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Keyboard.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Keyboard.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Keyboard.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Mouse.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Mouse.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Mouse.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Touch.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Touch.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Touch.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Sensor.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Sensor.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Sensor.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/SensorManager.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/SensorManager.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\SensorManager.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/VideoMode.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/VideoMode.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\VideoMode.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Vulkan.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Vulkan.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Vulkan.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Window.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Window.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Window.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowBase.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowBase.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\WindowBase.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/WindowImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\WindowImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/CursorImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/CursorImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\CursorImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/ClipboardImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/ClipboardImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\ClipboardImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/InputImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/InputImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\InputImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/JoystickImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/JoystickImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\JoystickImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/SensorImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/SensorImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\SensorImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VideoModeImpl.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VideoModeImpl.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\VideoModeImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VulkanImplWin32.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/VulkanImplWin32.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\VulkanImplWin32.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WindowImplWin32.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WindowImplWin32.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\WindowImplWin32.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WglContext.cpp || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj: CXX_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Window/Win32/WglContext.cpp || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32\WglContext.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\Win32
 
-build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj: RC_COMPILER__sfml-window_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Window/sfml-window.rc || cmake_object_order_depends_target_sfml-window
+build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj: RC_COMPILER__sfml-window_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Window/sfml-window.rc || cmake_object_order_depends_target_sfml-window
   DEFINES = -DSFML_WINDOW_EXPORTS -DUNICODE -D_UNICODE
   DEP_FILE = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir\sfml-window.rc.obj.d
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/vulkan -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include
@@ -969,7 +983,8 @@ build _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc
 #############################################
 # Link the shared library sfml-window-2.dll
 
-build sfml-window-2.dll _deps/sfml-build/lib/libsfml-window.a: CXX_SHARED_LIBRARY_LINKER__sfml-window_ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj | _deps/sfml-build/lib/libsfml-system.a || sfml-system-2.dll
+build sfml-window-2.dll _deps/sfml-build/lib/libsfml-window.a: CXX_SHARED_LIBRARY_LINKER__sfml-window_Release _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Clipboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Cursor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/GlResource.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/JoystickManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Keyboard.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Mouse.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Touch.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Sensor.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/SensorManager.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/VideoMode.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Vulkan.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Window.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowBase.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/CursorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/ClipboardImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/InputImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/JoystickImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/SensorImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VideoModeImpl.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/VulkanImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WindowImplWin32.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Win32/WglContext.cpp.obj _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/sfml-window.rc.obj | _deps/sfml-build/lib/libsfml-system.a || sfml-system-2.dll
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-system.a  -lwinmm  -lgdi32  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Window\CMakeFiles\sfml-window.dir
   POST_BUILD = cd .
@@ -1083,247 +1098,247 @@ build _deps/sfml-build/src/SFML/Window/install/strip: phony _deps/sfml-build/src
 
 build cmake_object_order_depends_target_sfml-graphics: phony || cmake_object_order_depends_target_sfml-system cmake_object_order_depends_target_sfml-window
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/BlendMode.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/BlendMode.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\BlendMode.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Color.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Color.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Color.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Font.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Font.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Font.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Glsl.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Glsl.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Glsl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLCheck.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\GLCheck.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/GLExtensions.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\GLExtensions.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Image.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Image.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Image.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ImageLoader.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ImageLoader.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\ImageLoader.cpp.obj.d
-  FLAGS = -std=gnu++17 -fno-strict-aliasing
+  FLAGS = -O3 -DNDEBUG -std=gnu++17 -fno-strict-aliasing
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderStates.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderStates.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderStates.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTexture.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTexture.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderTexture.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTarget.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTarget.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderTarget.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderWindow.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderWindow.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shader.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shader.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Shader.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Texture.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Texture.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Texture.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/TextureSaver.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/TextureSaver.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\TextureSaver.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transform.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transform.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Transform.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transformable.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Transformable.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Transformable.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/View.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/View.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\View.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Vertex.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Vertex.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Vertex.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shape.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Shape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Shape.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/CircleShape.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/CircleShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\CircleShape.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RectangleShape.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RectangleShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RectangleShape.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ConvexShape.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/ConvexShape.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\ConvexShape.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Sprite.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Sprite.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Sprite.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Text.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/Text.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\Text.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\VertexArray.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexBuffer.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/VertexBuffer.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\VertexBuffer.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImpl.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderTextureImpl.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplFBO.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderTextureImplFBO.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.cpp || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj: CXX_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Graphics/RenderTextureImplDefault.cpp || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\RenderTextureImplDefault.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
 
-build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj: RC_COMPILER__sfml-graphics_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Graphics/sfml-graphics.rc || cmake_object_order_depends_target_sfml-graphics
+build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj: RC_COMPILER__sfml-graphics_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Graphics/sfml-graphics.rc || cmake_object_order_depends_target_sfml-graphics
   DEFINES = -DSFML_GRAPHICS_EXPORTS -DSTBI_FAILURE_USERMSG
   DEP_FILE = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir\sfml-graphics.rc.obj.d
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/stb_image -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/glad/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/freetype2
@@ -1338,7 +1353,8 @@ build _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graph
 #############################################
 # Link the shared library sfml-graphics-2.dll
 
-build sfml-graphics-2.dll _deps/sfml-build/lib/libsfml-graphics.a: CXX_SHARED_LIBRARY_LINKER__sfml-graphics_ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj | _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || sfml-system-2.dll sfml-window-2.dll
+build sfml-graphics-2.dll _deps/sfml-build/lib/libsfml-graphics.a: CXX_SHARED_LIBRARY_LINKER__sfml-graphics_Release _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/BlendMode.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Vertex.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImpl.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault.cpp.obj _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/sfml-graphics.rc.obj | _deps/sfml-build/lib/libsfml-window.a _deps/sfml-build/lib/libsfml-system.a _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a || sfml-system-2.dll sfml-window-2.dll
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-window.a  _deps/sfml-build/lib/libsfml-system.a  _deps/sfml-src/extlibs/libs-mingw/x64/libfreetype.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Graphics\CMakeFiles\sfml-graphics.dir
   POST_BUILD = cd .
@@ -1452,175 +1468,175 @@ build _deps/sfml-build/src/SFML/Graphics/install/strip: phony _deps/sfml-build/s
 
 build cmake_object_order_depends_target_sfml-audio: phony || cmake_object_order_depends_target_sfml-system
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/ALCheck.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/ALCheck.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\ALCheck.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AlResource.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AlResource.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\AlResource.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AudioDevice.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/AudioDevice.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\AudioDevice.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Listener.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Listener.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\Listener.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Music.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Music.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\Music.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Sound.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/Sound.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\Sound.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBuffer.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBuffer.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundBuffer.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBufferRecorder.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundBufferRecorder.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundBufferRecorder.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/InputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/InputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\InputSoundFile.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/OutputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/OutputSoundFile.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\OutputSoundFile.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundRecorder.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundRecorder.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundRecorder.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundSource.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundSource.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundSource.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundStream.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundStream.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundStream.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileFactory.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileFactory.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileFactory.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderFlac.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderFlac.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileReaderFlac.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderMp3.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileReaderMp3.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderOgg.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderOgg.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileReaderOgg.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderWav.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileReaderWav.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileReaderWav.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterFlac.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterFlac.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileWriterFlac.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterOgg.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterOgg.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileWriterOgg.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.cpp || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj: CXX_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src/SFML/Audio/SoundFileWriterWav.cpp || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\SoundFileWriterWav.cpp.obj.d
-  FLAGS = -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
+  FLAGS = -O3 -DNDEBUG -std=gnu++17  -Wall -Wextra -Wshadow -Wnon-virtual-dtor -Wcast-align -Wunused -Woverloaded-virtual -Wconversion -Wsign-conversion -Wdouble-promotion -Wformat=2 -Wnull-dereference -Wold-style-cast -Wpedantic -Wmisleading-indentation -Wduplicated-cond -Wlogical-op -Wduplicated-branches
   INCLUDES = -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -IE:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -isystem E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   OBJECT_FILE_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
 
-build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj: RC_COMPILER__sfml-audio_unscanned_ E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Audio/sfml-audio.rc || cmake_object_order_depends_target_sfml-audio
+build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj: RC_COMPILER__sfml-audio_unscanned_Release E$:/MyCursorPJ/Tetris_game/build/_deps/sfml-build/src/SFML/Audio/sfml-audio.rc || cmake_object_order_depends_target_sfml-audio
   DEFINES = -DFLAC__NO_DLL -DOV_EXCLUDE_STATIC_CALLBACKS -DSFML_AUDIO_EXPORTS
   DEP_FILE = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir\sfml-audio.rc.obj.d
   INCLUDES = -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/include -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/src -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/minimp3 -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers/AL -I E:/MyCursorPJ/Tetris_game/build/_deps/sfml-src/extlibs/headers
@@ -1635,7 +1651,8 @@ build _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.ob
 #############################################
 # Link the shared library sfml-audio-2.dll
 
-build sfml-audio-2.dll _deps/sfml-build/lib/libsfml-audio.a: CXX_SHARED_LIBRARY_LINKER__sfml-audio_ _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj | _deps/sfml-build/lib/libsfml-system.a _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a || sfml-system-2.dll
+build sfml-audio-2.dll _deps/sfml-build/lib/libsfml-audio.a: CXX_SHARED_LIBRARY_LINKER__sfml-audio_Release _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundSource.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj _deps/sfml-build/src/SFML/Audio/CMakeFiles/sfml-audio.dir/sfml-audio.rc.obj | _deps/sfml-build/lib/libsfml-system.a _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a || sfml-system-2.dll
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = _deps/sfml-build/lib/libsfml-system.a  _deps/sfml-src/extlibs/libs-mingw/x64/libopenal32.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisenc.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbisfile.a  _deps/sfml-src/extlibs/libs-mingw/x64/libvorbis.a  _deps/sfml-src/extlibs/libs-mingw/x64/libogg.a  _deps/sfml-src/extlibs/libs-mingw/x64/libFLAC.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = _deps\sfml-build\src\SFML\Audio\CMakeFiles\sfml-audio.dir
   POST_BUILD = cd .

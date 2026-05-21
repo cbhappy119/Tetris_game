@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(NeonTetris LANGUAGES CXX)
+project(NeonTetris LANGUAGES CXX RC)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -19,7 +19,7 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(SFML)
 
-add_executable(NeonTetris src/main.cpp)
+add_executable(NeonTetris src/main.cpp app.rc)
 
 if(WIN32)
   set_target_properties(NeonTetris PROPERTIES WIN32_EXECUTABLE TRUE)

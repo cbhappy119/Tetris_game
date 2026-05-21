@@ -7,14 +7,14 @@
 
 # =============================================================================
 # Project: NeonTetris
-# Configurations: 
+# Configurations: Release
 # =============================================================================
 # =============================================================================
 
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__NeonTetris_unscanned_
+rule CXX_COMPILER__NeonTetris_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -22,9 +22,19 @@ rule CXX_COMPILER__NeonTetris_unscanned_
 
 
 #############################################
+# Rule for compiling RC files.
+
+rule RC_COMPILER__NeonTetris_unscanned_Release
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $DEFINES $INCLUDES $FLAGS $in $out
+  description = Building RC object $out
+
+
+#############################################
 # Rule for linking CXX executable.
 
-rule CXX_EXECUTABLE_LINKER__NeonTetris_
+rule CXX_EXECUTABLE_LINKER__NeonTetris_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\mingw1310_64\bin\c++.exe $FLAGS $LINK_FLAGS $in -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,0,--minor-image-version,0 $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX executable $TARGET_FILE
   restat = $RESTAT
@@ -41,7 +51,7 @@ rule CUSTOM_COMMAND
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__sfml-system_unscanned_
+rule CXX_COMPILER__sfml-system_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -51,7 +61,7 @@ rule CXX_COMPILER__sfml-system_unscanned_
 #############################################
 # Rule for compiling RC files.
 
-rule RC_COMPILER__sfml-system_unscanned_
+rule RC_COMPILER__sfml-system_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $DEFINES $INCLUDES $FLAGS $in $out
@@ -61,7 +71,7 @@ rule RC_COMPILER__sfml-system_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__sfml-system_
+rule CXX_SHARED_LIBRARY_LINKER__sfml-system_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\mingw1310_64\bin\c++.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,2,--minor-image-version,6 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -70,7 +80,7 @@ rule CXX_SHARED_LIBRARY_LINKER__sfml-system_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__sfml-main_unscanned_
+rule CXX_COMPILER__sfml-main_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -80,7 +90,7 @@ rule CXX_COMPILER__sfml-main_unscanned_
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__sfml-main_
+rule CXX_STATIC_LIBRARY_LINKER__sfml-main_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\CMake_64\bin\cmake.exe -E rm -f $TARGET_FILE && C:\Qt\Tools\mingw1310_64\bin\ar.exe qc $TARGET_FILE $LINK_FLAGS $in && C:\Qt\Tools\mingw1310_64\bin\ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -89,7 +99,7 @@ rule CXX_STATIC_LIBRARY_LINKER__sfml-main_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__sfml-window_unscanned_
+rule CXX_COMPILER__sfml-window_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -99,7 +109,7 @@ rule CXX_COMPILER__sfml-window_unscanned_
 #############################################
 # Rule for compiling RC files.
 
-rule RC_COMPILER__sfml-window_unscanned_
+rule RC_COMPILER__sfml-window_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $DEFINES $INCLUDES $FLAGS $in $out
@@ -109,7 +119,7 @@ rule RC_COMPILER__sfml-window_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__sfml-window_
+rule CXX_SHARED_LIBRARY_LINKER__sfml-window_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\mingw1310_64\bin\c++.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,2,--minor-image-version,6 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -118,7 +128,7 @@ rule CXX_SHARED_LIBRARY_LINKER__sfml-window_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__sfml-graphics_unscanned_
+rule CXX_COMPILER__sfml-graphics_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -128,7 +138,7 @@ rule CXX_COMPILER__sfml-graphics_unscanned_
 #############################################
 # Rule for compiling RC files.
 
-rule RC_COMPILER__sfml-graphics_unscanned_
+rule RC_COMPILER__sfml-graphics_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $DEFINES $INCLUDES $FLAGS $in $out
@@ -138,7 +148,7 @@ rule RC_COMPILER__sfml-graphics_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__sfml-graphics_
+rule CXX_SHARED_LIBRARY_LINKER__sfml-graphics_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\mingw1310_64\bin\c++.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,2,--minor-image-version,6 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
@@ -147,7 +157,7 @@ rule CXX_SHARED_LIBRARY_LINKER__sfml-graphics_
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__sfml-audio_unscanned_
+rule CXX_COMPILER__sfml-audio_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\c++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -157,7 +167,7 @@ rule CXX_COMPILER__sfml-audio_unscanned_
 #############################################
 # Rule for compiling RC files.
 
-rule RC_COMPILER__sfml-audio_unscanned_
+rule RC_COMPILER__sfml-audio_unscanned_Release
   depfile = $DEP_FILE
   deps = gcc
   command = ${LAUNCHER}${CODE_CHECK}C:\Qt\Tools\mingw1310_64\bin\windres.exe -O coff $DEFINES $INCLUDES $FLAGS $in $out
@@ -167,7 +177,7 @@ rule RC_COMPILER__sfml-audio_unscanned_
 #############################################
 # Rule for linking CXX shared library.
 
-rule CXX_SHARED_LIBRARY_LINKER__sfml-audio_
+rule CXX_SHARED_LIBRARY_LINKER__sfml-audio_Release
   command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\Qt\Tools\mingw1310_64\bin\c++.exe $LANGUAGE_COMPILE_FLAGS $ARCH_FLAGS $LINK_FLAGS -shared -o $TARGET_FILE -Wl,--out-implib,$TARGET_IMPLIB -Wl,--major-image-version,2,--minor-image-version,6 $in $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
   description = Linking CXX shared library $TARGET_FILE
   restat = $RESTAT
