@@ -1,6 +1,7 @@
 # Build outputs
 build/
-out/
+installer-output/
+release/
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
